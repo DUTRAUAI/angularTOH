@@ -1,0 +1,20 @@
+<h2>Alunos</h2>
+
+<table style="border: none;">
+  <tr>
+    <th>Foto</th>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Email</th>
+  </tr>
+
+  <tr *ngFor="let aluno of alunos">
+    <th><img class="foto-aluno" [src]="aluno.Fotos[0]?.url" crossOrigin=""></th>
+    <th>{{aluno.id}}</th>
+    <th>{{aluno.nome}}</th>
+    <th>{{aluno.email}}</th>
+
+    <button>Edit</button>
+  </tr>
+</table>
+

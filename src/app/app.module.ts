@@ -3,23 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here
 import { HttpClientModule } from '@angular/common/http';
+import { AlunosComponent } from './alunos/alunos.component';
 
-
+import {AlunosService} from './alunos.service';
+import { EditarAlunoComponent } from './editar-aluno/editar-aluno.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    AlunosComponent,
+    EditarAlunoComponent,
 
   ],
   imports: [
@@ -28,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule
   ],
+ // providers: [HttpClientModule, AlunosService], //se falhar
   providers: [],
   bootstrap: [AppComponent]
 })
