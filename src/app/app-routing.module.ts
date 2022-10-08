@@ -8,6 +8,8 @@ import { NovoAlunoComponent } from './novo-aluno/novo-aluno.component';
 const routes: Routes = [
   {path: 'alunos', component: AlunosComponent},
   { path: 'novo', component: NovoAlunoComponent },
+  { path: '', redirectTo: 'alunos', pathMatch: 'full' },
+  { path: '**', redirectTo: 'alunos', pathMatch: 'full' },
   { path: 'detalhar/:id', component: DetalharAlunoComponent },
 ];
 

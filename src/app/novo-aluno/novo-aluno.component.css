@@ -1,0 +1,8 @@
+.formulario{
+  display: flex;
+  margin: 5px 5px 5px 5px;
+  align-items: center;
+  flex-flow: row wrap;
+
+}
+

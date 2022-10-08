@@ -9,16 +9,16 @@ import { AlunosService } from '../alunos.service';
 })
 export class AlunosComponent implements OnInit {
 
-  alunos: Array<any> = new Array();
+  public alunos: Array<any> = new Array();
 
-  constructor(private alunosService: AlunosService) { }
+  constructor(public alunosService: AlunosService) { }
 
   ngOnInit(): void {
     this.listarAlunos();
   }
 
   listarAlunos(){
-    this.alunosService.listarAlunos().subscribe(alunos => {
+    this.alunosService.listaAlunos().subscribe(alunos => {
       this.alunos = alunos;
 
     }, err => {

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AlunosService } from '../alunos.service';
+import { InterAluno } from '../models/InterAlunos';
 
 @Component({
   selector: 'app-novo-aluno',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovoAlunoComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(public alunosService: AlunosService) { }
 
   ngOnInit(): void {
   }
+
+    AddAluno(aluno: InterAluno){
+
+
+
+    }
 
 }

@@ -29,7 +29,7 @@ import { NovoAlunoComponent } from './novo-aluno/novo-aluno.component';
     FormsModule
   ],
  // providers: [HttpClientModule, AlunosService], //se falhar
-  providers: [],
+  providers: [AlunosService],
   bootstrap: [AppComponent] //Definição do component inicial da aplicação
 })
 export class AppModule { }

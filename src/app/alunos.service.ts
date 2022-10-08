@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
-import { Observable, observable } from 'rxjs';
+import { Observable, observable, pipe } from 'rxjs';
+import { apiURL } from 'src/environments/environment';
+import { InterAluno } from './models/InterAlunos';
+
 
 
 @Injectable({
@@ -10,14 +13,31 @@ import { Observable, observable } from 'rxjs';
 
 export class AlunosService {
 
+  public alunos: Array<any> = new Array();
+
+
+
+
+
   constructor(private http: HttpClient) {}
 
-    listarAlunos() : Observable<any>{
-      return this.http.get('http://192.168.1.20/alunos');
+    listaAlunos() : Observable<InterAluno[]>{
+      return this.http.get<InterAluno[]>(`${apiURL}`+ '/alunos');
     }
-/*
-    novoAluno() : Observable <any>{
-      return console.log('put');
-    }*/
+
+    cadastraAluno(aluno: InterAluno){
+      return this.http.post<InterAluno>(`${apiURL}` + '/alunos', aluno)
+    }
+
+    editaAluno(id: number, data: any){
+      return this.http.put(`${apiURL}/${id}`, data);
+    }
+
+    DeletaAluno(id: number){
+      return this.http.delete(`${apiURL}/${id}`);
+    }
+
+    //
+
   }
 
