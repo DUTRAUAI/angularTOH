@@ -1,11 +1,36 @@
-.foto-aluno{
-
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
+.foto-aluno {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }
 
-table, tr, th {
+table,
+tr,
+th {
   border: 1px solid black;
-  }
+}
 
+.title {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 10px 15px;
+}
+
+.container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 10px 15px;
+}
+
+.btn-detalhes{
+  background-color: #0095ff;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.15385;
+  margin: 0;
+  padding: 8px .8em;
+}

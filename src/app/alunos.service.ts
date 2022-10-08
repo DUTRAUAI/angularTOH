@@ -7,6 +7,7 @@ import { Observable, observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AlunosService {
 
   constructor(private http: HttpClient) {}
@@ -14,5 +15,9 @@ export class AlunosService {
     listarAlunos() : Observable<any>{
       return this.http.get('http://192.168.1.20/alunos');
     }
+/*
+    novoAluno() : Observable <any>{
+      return console.log('put');
+    }*/
   }
 

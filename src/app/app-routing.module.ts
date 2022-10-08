@@ -1,18 +1,18 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AlunosComponent } from './alunos/alunos.component';
 import { AppComponent } from './app.component';
-import { EditarAlunoComponent } from './editar-aluno/editar-aluno.component';
-
+import { DetalharAlunoComponent } from './detalhar-aluno/detalhar-aluno.component';
+import { NovoAlunoComponent } from './novo-aluno/novo-aluno.component';
 
 const routes: Routes = [
-
-
-  //{path: '/aluno/id:/edit', component: EditarAlunoComponent},
-
+  {path: 'alunos', component: AlunosComponent},
+  { path: 'novo', component: NovoAlunoComponent },
+  { path: 'detalhar/:id', component: DetalharAlunoComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

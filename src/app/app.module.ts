@@ -9,7 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlunosComponent } from './alunos/alunos.component';
 
 import {AlunosService} from './alunos.service';
-import { EditarAlunoComponent } from './editar-aluno/editar-aluno.component';
+import { DetalharAlunoComponent } from './detalhar-aluno/detalhar-aluno.component';
+import { NovoAlunoComponent } from './novo-aluno/novo-aluno.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { EditarAlunoComponent } from './editar-aluno/editar-aluno.component';
     AppComponent,
     MessagesComponent,
     AlunosComponent,
-    EditarAlunoComponent,
+    DetalharAlunoComponent,
+    NovoAlunoComponent,
 
   ],
   imports: [
@@ -28,6 +30,6 @@ import { EditarAlunoComponent } from './editar-aluno/editar-aluno.component';
   ],
  // providers: [HttpClientModule, AlunosService], //se falhar
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] //Definição do component inicial da aplicação
 })
 export class AppModule { }
