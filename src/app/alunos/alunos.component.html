@@ -14,7 +14,7 @@
     <span>{{ aluno.id }}</span>
     <span>{{ aluno.nome }}</span>
     <span>{{ aluno.email }}</span>
-    <span> <button class="btn-detalhes" [routerLink]="['detalhar','aluno.id']">Detalhar</button></span>
 
+    <button class="btn-detalhes" (click)="detalhaAluno(aluno.id)">Detalhar</button>
 
   </div>

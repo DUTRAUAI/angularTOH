@@ -1,1 +1,32 @@
-<p>detalhar-aluno works!</p>
+<h2>Aluno {{aluno.nome}} </h2>
+
+<form #form>
+
+  <div class="formulario">
+    <input type="text" name="nome" [(ngModel)]="aluno.nome" placeholder="Nome"/>
+  </div>
+
+  <div class="formulario">
+    <input type="text" name="sobrenome" [(ngModel)]="aluno.sobrenome" placeholder="Sobrenome"/>
+  </div>
+
+  <div class="formulario">
+    <input type="email" name="email" [(ngModel)]="aluno.email" placeholder="E-mail"/>
+  </div>
+
+  <div class="formulario">
+    <input type="text" name="idade" [(ngModel)]="aluno.idade" placeholder="Idade"/>
+  </div>
+
+  <div class="formulario">
+    <input type="text" name="peso" [(ngModel)]="aluno.peso" placeholder="Peso"/>
+  </div>
+
+  <div class="formulario">
+    <input type="text" name="altura" [(ngModel)]="aluno.altura" placeholder="Altura"/>
+  </div>
+
+  <button type="button" (click)="editaAluno(aluno.id)" >Atualizar</button>
+  <button type="button" (click)="DeletaAluno(aluno.id)" >Excluir</button>
+
+</form>

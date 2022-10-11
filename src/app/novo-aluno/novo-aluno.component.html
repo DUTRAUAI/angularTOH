@@ -1,35 +1,31 @@
 <h2>Alunos</h2>
 
-<form method="post">
+<form #form>
 
   <div class="formulario">
-    <label for="nome">Nome:</label>
-    <input type="text" />
+    <input type="text" name="nome" [(ngModel)]="aluno.nome" placeholder="Nome"/>
   </div>
 
   <div class="formulario">
-    <label for="sobrenome">Sobrenome:</label>
-    <input type="text" />
+    <input type="text" name="sobrenome" [(ngModel)]="aluno.sobrenome" placeholder="Sobrenome"/>
   </div>
 
   <div class="formulario">
-    <label for="email">E-mail:</label>
-    <input type="email"/>
+    <input type="email" name="email" [(ngModel)]="aluno.email" placeholder="E-mail"/>
   </div>
 
   <div class="formulario">
-    <label for="idade">Idade:</label>
-    <input type="number"/>
+    <input type="text" name="idade" [(ngModel)]="aluno.idade" placeholder="Idade"/>
   </div>
 
   <div class="formulario">
-    <label for="peso">Peso:</label>
-    <input type="number"/>
+    <input type="text" name="peso" [(ngModel)]="aluno.peso" placeholder="Peso"/>
   </div>
 
   <div class="formulario">
-    <label for="altura">Altura:</label>
-    <input type="number"/>
+    <input type="text" name="altura" [(ngModel)]="aluno.altura" placeholder="Altura"/>
   </div>
+
+  <button type="button" (click)="addAluno()" >Cadastrar</button>
 
 </form>

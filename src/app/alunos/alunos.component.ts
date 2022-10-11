@@ -1,5 +1,6 @@
 import { Component, Directive, OnInit } from '@angular/core';
 import { AlunosService } from '../alunos.service';
+import { Router, Routes } from '@angular/router';
 
 
 @Component({
@@ -11,16 +12,23 @@ export class AlunosComponent implements OnInit {
 
   public alunos: Array<any> = new Array();
 
-  constructor(public alunosService: AlunosService) { }
+
+
+  constructor(public alunosService: AlunosService, public router: Router) { }
+
+
 
   ngOnInit(): void {
     this.listarAlunos();
   }
 
+  detalhaAluno(alunoId: number){
+    this.router.navigateByUrl('/aluno/edit/' + alunoId)
+  }
+
   listarAlunos(){
     this.alunosService.listaAlunos().subscribe(alunos => {
       this.alunos = alunos;
-
     }, err => {
       console.log('Erro ao listar os Alunos', err);
     })
