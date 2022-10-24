@@ -1,4 +1,9 @@
 <h2>Aluno {{aluno.nome}} </h2>
+<img *ngIf="aluno.Fotos != null && aluno.Fotos.length" class="foto-aluno" [src]="aluno.Fotos[0].url" crossOrigin="" >
+<div class="detail-img">
+  <input type="file" [multiple]="1" accept="image/*" (change)="onFileSelected($event)" crossOrigin="" />
+  <button type="button" (click)="uploadFoto()" >Adicionar Foto</button>
+</div>
 
 <form #form>
 

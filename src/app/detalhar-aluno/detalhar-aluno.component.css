@@ -70,3 +70,14 @@ a {
   height: 36px;
   border-radius: 50%;
 }
+
+div.detail-img{
+  width: 325px;
+  display: flex;
+justify-content: center;
+}
+div.foto-button{
+  width: 325px;
+  display: flex;
+justify-content: center;
+}

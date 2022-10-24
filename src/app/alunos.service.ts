@@ -1,7 +1,7 @@
 import { Injectable, ViewChild } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
-import { Observable, observable, pipe } from 'rxjs';
+import { Observable } from 'rxjs';
 import { apiURL } from 'src/environments/environment';
 import { InterAluno } from './models/InterAluno';
 
@@ -30,9 +30,12 @@ export class AlunosService {
     return this.http.put<InterAluno>(`${apiURL}` + '/alunos/' + id, data);
   }
 
-  DeletaAluno(id: number) {
+  deletaAluno(id: number) {
     return this.http.delete(`${apiURL}` + '/alunos/' + id);
   }
 
-  //
+  addFoto(data: any){
+    return this.http.post(`${apiURL}` + '/fotos/', data);
+  }
+
 }

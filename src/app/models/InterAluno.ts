@@ -1,5 +1,6 @@
 export class InterAluno {
 
+    Fotos?: any;
     id: number;
     nome: string;
     sobrenome: string;

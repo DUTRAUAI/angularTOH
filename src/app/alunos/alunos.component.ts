@@ -1,6 +1,6 @@
 import { Component, Directive, OnInit } from '@angular/core';
 import { AlunosService } from '../alunos.service';
-import { Router, Routes } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
