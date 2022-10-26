@@ -11,7 +11,7 @@ import { AlunosComponent } from './alunos/alunos.component';
 import {AlunosService} from './alunos.service';
 import { DetalharAlunoComponent } from './detalhar-aluno/detalhar-aluno.component';
 import { NovoAlunoComponent } from './novo-aluno/novo-aluno.component';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -21,12 +21,15 @@ import { NovoAlunoComponent } from './novo-aluno/novo-aluno.component';
     DetalharAlunoComponent,
     NovoAlunoComponent,
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule,
+
   ],
  // providers: [HttpClientModule, AlunosService], //se falhar
   providers: [AlunosService],

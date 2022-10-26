@@ -1,4 +1,4 @@
-import { Component, Directive, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AlunosService } from '../alunos.service';
 import { Router } from '@angular/router';
 

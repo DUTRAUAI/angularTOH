@@ -4,33 +4,37 @@
   border-radius: 50%;
 }
 
-table,
-tr,
-th {
-  border: 1px solid black;
-}
 
-.title {
-  width: 50%;
+
+
+.aluno-container {
+  width: 600px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: left;
   padding: 3px 10px 15px;
 }
 
-.container {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 3px 10px 15px;
+
+
+span{
+  width: 100px;
+
+  text-align: left;
+  justify-content: left;
+  padding: 3px;
 }
+
+span.aluno-email{
+  margin-right: 75px;
+  justify-content: right;
+}
+
 
 .btn-detalhes{
   background-color: #0095ff;
   color: #fff;
   font-size: 13px;
-  line-height: 1.15385;
   margin: 0;
   padding: 8px .8em;
 }

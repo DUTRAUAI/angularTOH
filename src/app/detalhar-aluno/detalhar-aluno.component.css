@@ -51,10 +51,12 @@ div{
     margin-top: 20px;
 }
 
-img {
-  height: 180px;
-  width: 180px;
+img.foto-aluno {
+  height: 150px;
+  width: 150;
   border-radius: 50%;
+  cursor: pointer;
+
 }
 
 a {
@@ -71,13 +73,45 @@ a {
   border-radius: 50%;
 }
 
-div.detail-img{
+div.detail-img label{
   width: 325px;
   display: flex;
 justify-content: center;
+justify-items: center;
 }
-div.foto-button{
-  width: 325px;
+
+button.foto-button{
+margin: 5px;
+
+
+
+}
+
+input.choose-file{
+  display: none;
+}
+
+fa-icon.icon-foto-edit{
+
   display: flex;
-justify-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 20px;
+  position: relative;
+  margin-top: 20px;
+
 }
+
+
+label{
+  width: 325px;
+  margin: 5px;
+  padding: 0 0 20px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: right;
+}
+
+
+

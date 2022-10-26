@@ -1,9 +1,19 @@
-<h2>Aluno {{aluno.nome}} </h2>
-<img *ngIf="aluno.Fotos != null && aluno.Fotos.length" class="foto-aluno" [src]="aluno.Fotos[0].url" crossOrigin="" >
-<div class="detail-img">
-  <input type="file" [multiple]="1" accept="image/*" (change)="onFileSelected($event)" crossOrigin="" />
-  <button type="button" (click)="uploadFoto()" >Adicionar Foto</button>
-</div>
+
+  <label>
+    <input type="file" class="choose-file" [multiple]="1" accept="image/*" (change)="onFileSelected($event)" crossOrigin=""/>
+      <!--
+        <img *ngIf="aluno.Fotos != null && aluno.Fotos.length" class="foto-aluno" [src]="aluno.Fotos[0].url" crossOrigin="" >
+      -->
+      <div>
+        <img *ngIf="aluno.Fotos[0] == undefined" class="foto-aluno"  crossOrigin="" src='https://cdn.icon-icons.com/icons2/1141/PNG/512/1486395884-account_80606.png'>
+        <img *ngIf="aluno.Fotos != null && aluno.Fotos.length" class="foto-aluno" [src]="aluno.Fotos[0].url" crossOrigin="" >
+      </div>
+
+
+
+      <button type="button" class="foto-button" (click)="uploadFoto()" >Adicionar Foto</button>
+  </label>
+
 
 <form #form>
 

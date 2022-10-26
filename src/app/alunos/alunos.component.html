@@ -2,18 +2,17 @@
 <button routerLink="/novo">Novo Aluno</button>
 
 
-  <div class="title">
-    <span>Foto</span>
-    <span>ID</span>
-    <span>Nome</span>
-    <span>Email</span>
-  </div>
 
-  <div class="container" *ngFor="let aluno of alunos">
-    <span><img class="foto-aluno" [src]="aluno.Fotos[0]?.url" crossOrigin=""></span>
+<div class="aluno-container" *ngFor="let aluno of alunos">
+
+    <span>
+      <img *ngIf="aluno.Fotos[0] == undefined" class="foto-aluno"  crossOrigin="" src='https://cdn.icon-icons.com/icons2/1141/PNG/512/1486395884-account_80606.png'>
+      <img *ngIf="aluno.Fotos != null && aluno.Fotos.length" class="foto-aluno" [src]="aluno.Fotos[0]?.url" crossOrigin="">
+    </span>
+
     <span>{{ aluno.id }}</span>
     <span>{{ aluno.nome }}</span>
-    <span>{{ aluno.email }}</span>
+    <span class="aluno-email">{{ aluno.email }}</span>
 
     <button class="btn-detalhes" (click)="detalhaAluno(aluno.id)">Detalhar</button>
 
